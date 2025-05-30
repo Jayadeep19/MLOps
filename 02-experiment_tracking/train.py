@@ -36,11 +36,10 @@ def run_train(data_path: str):
         mlflow.log_param("train-data-path", "./green_tripdata_2021-01.csv")
         mlflow.log_param("valid-data-path", "./green_tripdata_2021-02.csv")
         mlflow.log_param("test-data-path", "./green_tripdata_2021-03.csv")
-        max_depth = 10
-        random_state = 0
-        
+        params = {"max_depth":10,
+                  "random_state":0}
 
-        rf = RandomForestRegressor(max_depth=max_depth, random_state=random_state)
+        rf = RandomForestRegressor(**params)
         rf.fit(X_train, y_train)
         y_pred = rf.predict(X_val)
 

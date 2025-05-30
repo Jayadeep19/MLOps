@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/MLOps/02-experiment_tracking/mlruns/314948515686483807/bffc3f8ea79149058207b5b1ba7d22ab/artifacts
+end_time: 1748518246665
+entry_point_name: ''
+experiment_id: '314948515686483807'
+lifecycle_stage: active
+run_id: bffc3f8ea79149058207b5b1ba7d22ab
+run_name: calm-perch-510
+run_uuid: bffc3f8ea79149058207b5b1ba7d22ab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748518227228
+status: 3
+tags: []
+user_id: codespace

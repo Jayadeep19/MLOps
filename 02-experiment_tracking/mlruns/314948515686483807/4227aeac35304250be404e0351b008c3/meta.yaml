@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/MLOps/02-experiment_tracking/mlruns/314948515686483807/4227aeac35304250be404e0351b008c3/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '314948515686483807'
+lifecycle_stage: active
+run_id: 4227aeac35304250be404e0351b008c3
+run_name: brawny-newt-315
+run_uuid: 4227aeac35304250be404e0351b008c3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748518348863
+status: 1
+tags: []
+user_id: codespace
