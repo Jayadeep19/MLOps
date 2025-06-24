@@ -1,0 +1,29 @@
+# Specifies the version used in this configuration file
+apiVersion: 1
+
+# Defines the data sources that Grafana should connect to
+datasources:
+  # Defines a data source
+  - 
+    # Specifies the name of the data source
+    name: PostgreSQL
+    # Specifies the type of the data source
+    type: postgres
+    # Specifies how Grafana should access the data source
+    # The 'proxy' mode means that all requests are proxied via the Grafana backend/server
+    access: proxy
+    # Specifies the URL (including the port number) of the data source
+    url: db.:5432
+    # Specifies the name of the database that Grafana should connect to
+    database: test
+    # Specifies the username that Grafana should use to connect to the database
+    user: postgres
+    # Specifies secure data like passwords
+    secureJsonData:
+      # Sets the password for the database connection
+      password: 'naga'
+    # Specifies additional JSON data for the data source configuration
+    jsonData:
+      # Disables SSL mode for the database connection
+      sslmode: 'disable'
+      database: test
