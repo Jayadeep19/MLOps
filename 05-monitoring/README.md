@@ -6,3 +6,7 @@
     - If inorder to load the existing docker container and load the existing grafana dashboard use: `docker-compose up`
     - To stop the docker container use: `docker-compose down`
 - Next, the **reference** and **current** datasets are created using the homework.ipynb notebook. These datasets are further used to generate **metrics** generation.
+- The **metrics** are generated using the *Evidenlty* library. The library has a breaking changes in the versions starting from 0.6.7. In this module the version 0.7.8 is used. Refer to [post 0.7](https://github.com/DataTalksClub/mlops-zoomcamp/tree/main/05-monitoring/post-evidently-0.7) for the latest usage and [pre 0.7](https://github.com/DataTalksClub/mlops-zoomcamp/blob/main/05-monitoring/evidently_metrics_calculation.py) for older usage
+- Once the metrics are generated these metrics are written to a postgres db in the same script `generate_evidently_report.py`.
+- We use this table in the db to create a grafana monitoring dashboard. The initial unam and pwd are admin and admin. Then change it to the liking. use the same as db for ease.
+- Once the dashboards are created, the dashboards can be saved as json files and the docker composed is not necessarly build the subsequent runs. save these json files in the directory as mentioned [here](https://github.com/dimzachar/mlops-zoomcamp/blob/master/notes/Week_5/save_dashboard.md) and [here](https://github.com/DataTalksClub/mlops-zoomcamp/tree/main/05-monitoring/post-evidently-0.7/dashboards)

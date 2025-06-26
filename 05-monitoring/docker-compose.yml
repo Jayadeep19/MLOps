@@ -2,6 +2,7 @@ version: '3.7'
 
 volumes: 
   grafana_data: {}
+  pgdata:
 
 networks:
   front-tier:
@@ -17,6 +18,9 @@ services:
       - "5432:5432"
     networks:
       - back-tier
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
 
   adminer:
     image: adminer
@@ -34,6 +38,8 @@ services:
       - "3000:3000"
     volumes:
       - ./config/grafana_datasources.yaml:/etc/grafana/provisioning/datasources/datasource.yaml:ro
+      - ./config/grafana_dashboards.yaml:/etc/grafana/provisioning/dashboards/dashboards.yaml:ro
+      - ./dashboards:/opt/grafana/dashboards
     networks:
       - front-tier
       - back-tier 

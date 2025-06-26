@@ -1,0 +1,2 @@
+- Used the dataset of green taxi trip 2023-01,02,03 for the module. Download these datasets to run the scripts.
+- Process these datasets using the preprocess_data.py
